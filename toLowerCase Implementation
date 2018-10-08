@@ -1,0 +1,16 @@
+Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
+
+Input: "Hello&Hi"
+Output: "hello&hi"
+
+
+
+class Solution:
+    def toLowerCase(self, str):
+        out=""
+        for x in str:
+            if 65<=ord(x)<=91:          //to check if it is an uppercase letter
+                out+=chr(ord(x)+32)     //then make it a lowercase and add to output string
+            else:                       //for any other character, just add it to the output string
+                out+=x
+        return out
